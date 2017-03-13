@@ -5,3 +5,7 @@
 .ImageContainer img {
     border: solid 2px #999;
 }
+
+body {
+    text-align: center;
+}
