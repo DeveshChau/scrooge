@@ -7,6 +7,7 @@
     <title>scrooge</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/Navbar-Fixed-Side1.css">
     <link rel="stylesheet" href="assets/css/Navigation-Clean1.css">
@@ -15,31 +16,65 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body style="color:#f1f7fc;background-color:#f5f8fa;">
+<body style="color:#010101;background-color:#f5f8fa;">
     <header style="height:50px;background-color:#353842;">
-        <nav class="navbar navbar-default navigation-clean" style="height:50px;background-color:#3097D1;color:#eeeeee;">
-            <div class="container">
-                <div class="navbar-header"><a class="navbar-brand navbar-link" href="#" style="padding:6px;height:30px;margin:0px;">Innovation Healthcare System</a>
-                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                </div>
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="nav navbar-nav navbar-right" style="margin:-3px -50px;color:#e7e7e7;">
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color:#eeeeee;">Operator <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li role="presentation"><a href="#">First Item</a></li>
-                                <li role="presentation"><a href="#">Second Item</a></li>
-                                <li role="presentation"><a href="#">Third Item</a></li>
-                            </ul>
-                        </li>
+    <nav class="navbar navbar-default navigation-clean" style="padding: 10px 20px;height:50px;background-color:#D9230F;color:#eeeeee;box-shadow:0 0 2px 2px #C8C8C8;">
+        <div class="navbar-header"><a href="#" class="navbar-brand navbar-link" style="padding:6px;height:30px;margin:0px;">Innovation Healthcare System</a>
+            <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav navbar-right" style="margin:-3px -50px;color:#e7e7e7;">
+                <li class="dropdown"><a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle" style="color:#eeeeee;padding:8px 50px;">Operator <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu" style="margin: 5px 50px;">
+                        <li role="presentation"><a href="#">Logout</a></li>
                     </ul>
-                </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+    <div class="container-fluid" style="padding:0;">
+        <div class="row">
+            <div class="col-lg-3 col-md-12 col-md-3">
+                <section id="vertical-menu" style="margin:20px;">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active"> <i class="fa fa-home fa-fw"></i> Inquiry</a>
+                        <a href="#" class="list-group-item"> <i class="fa fa-book fa-fw"></i> Appointments</a>
+                        <a href="#" class="list-group-item"> <i class="fa fa-pencil fa-fw"></i> Followups</a>
+                        <a href="#" class="list-group-item"> <i class="fa fa-cog fa-fw"></i> Call Logs</a>
+                    </div>
+                </section>
             </div>
-        </nav>
-    </header>
-    <div class="container-fluid" style="padding:0;"></div>
+            <div class="col-lg-9 col-md-12 col-md-9">
+                <section style="margin:0px;padding:20px 20px 0 0;">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Column 1</th>
+                                    <th>Column 2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cell 1</td>
+                                    <td>Cell 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Cell 3</td>
+                                    <td>Cell 4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/Sidebar-Menu.js"></script>
+    <script src="assets/js/Vertical-menu.js"></script>
 </body>
 
 </html>
