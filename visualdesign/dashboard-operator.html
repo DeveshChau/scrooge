@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/Navbar-Fixed-Side1.css">
     <link rel="stylesheet" href="assets/css/Navigation-Clean1.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Search-Form.css">
     <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
     <link rel="stylesheet" href="assets/css/Sidebar-Menu1.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -36,37 +37,68 @@
     <div class="container-fluid" style="padding:0;">
         <div class="row">
             <div class="col-lg-3 col-md-12 col-md-3">
-                <section id="vertical-menu" style="margin:20px;">
-                    <div class="list-group">
-                        <a href="#" class="list-group-item active"> <i class="fa fa-home fa-fw"></i> Inquiry</a>
-                        <a href="#" class="list-group-item"> <i class="fa fa-book fa-fw"></i> Appointments</a>
-                        <a href="#" class="list-group-item"> <i class="fa fa-pencil fa-fw"></i> Followups</a>
-                        <a href="#" class="list-group-item"> <i class="fa fa-cog fa-fw"></i> Call Logs</a>
+                <section id="vertical-menu" style="margin:30px 0 30px 30px;">
+                    <div class="list-group nav nav tab">
+                        <a href="#inquiry" class="list-group-item active" data-toggle="tab"> <i class="fa fa-question-circle fa-fw"></i> Inquiry</a>
+                        <a href="#appointments" class="list-group-item" data-toggle="tab"> <i class="fa fa-bookmark fa-fw"></i> Appointments</a>
+                        <a href="#followups" class="list-group-item" data-toggle="tab"> <i class="fa fa-info-circle fa-fw"></i> Followups</a>
+                        <a href="#call-logs" class="list-group-item" data-toggle="tab"> <i class="fa fa-phone-square fa-fw"></i> Call Logs</a>
                     </div>
                 </section>
             </div>
             <div class="col-lg-9 col-md-12 col-md-9">
-                <section id="container" style="/*margin:0px;*//*padding:20px 20px 0 0;*/height:auto;">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Column 1</th>
-                                    <th>Column 2</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Cell 1</td>
-                                    <td>Cell 2</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 3</td>
-                                    <td>Cell 4</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <section id="container" class="tab-content" style="/*padding:20px 20px 0 0;*/height:auto;margin:30px 30px 0 0;">
+                    <div id="inquiry" class="tab-pane fade active in">
+                        <div class="row">
+                            <div class="col-md-4" style="height:40px;">
+                                <button class="btn btn-default" type="button">New Inquiry</button>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="col-md-4" style="padding:0;height:40px;">
+                                <form class="search-form" style="margin:0;">
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><span><i class="glyphicon glyphicon-search"></i></span></div>
+                                        <input class="form-control" type="text" placeholder="I am looking for..">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default" type="button">Search </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Column 1</th>
+                                                <th>Column 2</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Cell 1</td>
+                                                <td>Cell 2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cell 3</td>
+                                                <td>Cell 4</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div id="appointments" class="tab-pane fade">
+                        <h1>Appointments </h1></div>
+                    <div id="followups" class="tab-pane fade">
+                        <h1>Followups </h1></div>
+                    <div id="call-logs" class="tab-pane fade">
+                        <h1>Call logs</h1></div>
                 </section>
             </div>
         </div>
