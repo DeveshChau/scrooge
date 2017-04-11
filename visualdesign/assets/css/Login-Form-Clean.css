@@ -64,3 +64,15 @@ section#container {
   min-height:500px;
 }
 
+.form-group.pull-right {
+  margin-right:15px;
+}
+
+.table-responsive {
+  margin-top:20px;
+}
+
+tbody {
+  border-bottom:1px solid #ccc;
+}
+

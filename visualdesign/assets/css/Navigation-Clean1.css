@@ -180,7 +180,7 @@
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
   z-index:2;
   color:#262626;
-  background-color:#e7e7e7;
+  background-color:#eee;
   border-color:#d4d4d4;
 }
 
