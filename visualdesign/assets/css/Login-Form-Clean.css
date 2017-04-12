@@ -61,7 +61,7 @@ section#container {
   background:#fff;
   border:1px solid #d4d4d4;
   border-radius:5px;
-  min-height:500px;
+  /*min-height:500px;*/
 }
 
 .form-group.pull-right {
@@ -74,5 +74,9 @@ section#container {
 
 tbody {
   border-bottom:1px solid #ccc;
+}
+
+#container {
+  /*height:auto;*/
 }
 

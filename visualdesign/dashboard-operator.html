@@ -31,10 +31,10 @@
         </div>
     </nav>
 </header>
-    <div class="container-fluid" style="padding:0;">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3 col-md-12 col-md-3">
-                <section id="vertical-menu" style="margin:30px 0 30px 30px;">
+                <section id="vertical-menu" style="margin:30px 0;">
                     <div class="list-group nav nav tab">
                         <a href="#inquiry" class="list-group-item active" data-toggle="tab"> <i class="fa fa-question-circle fa-fw"></i> Inquiry</a>
                         <a href="#appointments" class="list-group-item" data-toggle="tab"> <i class="fa fa-bookmark fa-fw"></i> Appointments</a>
@@ -44,110 +44,53 @@
                 </section>
             </div>
             <div class="col-lg-9 col-md-12 col-md-9">
-                <section id="container" class="tab-content" style="padding:30px;height:auto;margin:30px 30px 0 0;">
+                <section id="container" class="tab-content" style="margin:30px  0;padding:30px;">
                     <div id="inquiry" class="tab-pane fade active in">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div></div>
-                            </div>
-                            <div class="col-md-4" style="height:40px;">
-                                <button class="btn btn-default btn-primary" type="button">New Inquiry</button>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="col-md-4" style="padding:0;height:40px;">
-                                <div class="form-group pull-right">
-    <input type="text" class="search form-control" placeholder="Search Inquiry">
-</div>
-                            </div>
-                            <div class="col-md-12">
-                                <div></div>
-                            </div>
-                            <div class="col-md-12">
-                                <div></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="table-responsive">
-                                    <table class="table table table-striped table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>Name </th>
-                                                <th>Inquiry Details</th>
-                                                <th>Contact </th>
-                                                <th>Date </th>
-                                                <th>Time </th>
-                                                <th>Follow Up Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Cell 1</td>
-                                                <td>Cell 2</td>
-                                                <td>Cell 3</td>
-                                                <td>Cell 4</td>
-                                                <td>Cell 5</td>
-                                                <td>Cell 6</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cell 3</td>
-                                                <td>Cell 4</td>
-                                                <td>Cell 3</td>
-                                                <td>Cell 4</td>
-                                                <td>Cell 5</td>
-                                                <td>Cell 6</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <form class="form-horizontal">
-                                    <fieldset>
-                                        <legend><strong>New Inquiry</strong></legend>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
+                        <div id="new-inquiry-wrapper" class="wrapper hidden">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form class="form-horizontal">
+                                        <fieldset>
+                                            <legend><strong>New Inquiry</strong></legend>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
   <label for="personName" class="col-lg-12">Person Name *</label>
   <div class="col-lg-12">
     <input class="form-control" id="personName" placeholder="Name" type="text">
   </div>
 </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
   <label for="contactNumber" class="col-lg-12">Contact Number *</label>
   <div class="col-lg-12">
     <input class="form-control" id="contactNumber" placeholder="Contact Number" type="text">
   </div>
 </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
   <label for="personArea" class="col-lg-12">Area</label>
   <div class="col-lg-12">
     <input class="form-control" id="personArea" placeholder="Area" type="text">
   </div>
 </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
   <label for="personCity" class="col-lg-12">City *</label>
   <div class="col-lg-12">
     <input class="form-control" id="personCity" placeholder="City" type="text">
   </div>
 </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
   <label for="hospital" class="col-lg-12">Hospital</label>
   <div class="col-lg-12">
         <select class="form-control" id="hospital">
@@ -159,47 +102,108 @@
         </select>
   </div>
 </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
   <label for="doctor" class="col-lg-12">Doctor</label>
   <div class="col-lg-12">
     <input class="form-control" id="doctor" placeholder="Doctor" type="text">
   </div>
 </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
   <label for="inquiryDetails" class="col-lg-12">Inquiry Details</label>
   <div class="col-lg-12">
     <textarea class="form-control" rows="3" id="inquiryDetails" placeholder="Inquiry Details"></textarea>
   </div>
 </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
     <div class="checkbox col-lg-12">
       <label>
         <input type="checkbox"> Follow Up required?
       </label>
     </div>
 </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
     <div class="col-lg-12" style="text-align:right">
+        <button type="button" class="btn btn-default btn-cancel" style="margin-right:5px;">Cancel</button>
         <button type="submit" class="btn btn-primary">Save Inquiry</button>
-
     </div>
 </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </fieldset>
-                                </form>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="inquiry-list-wrapper" class="wrapper">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-4" style="height:40px;">
+                                    <button class="btn btn-default btn-primary" type="button" id="btn-new-inquiry">New Inquiry</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="col-md-4" style="padding:0;height:40px;">
+                                    <div class="form-group pull-right">
+    <input type="text" class="search form-control" placeholder="Search Inquiry">
+</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table table-striped table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name </th>
+                                                    <th>Inquiry Details</th>
+                                                    <th>Contact </th>
+                                                    <th>Date </th>
+                                                    <th>Time </th>
+                                                    <th>Follow Up Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Cell 1</td>
+                                                    <td>Cell 2</td>
+                                                    <td>Cell 3</td>
+                                                    <td>Cell 4</td>
+                                                    <td>Cell 5</td>
+                                                    <td>Cell 6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cell 3</td>
+                                                    <td>Cell 4</td>
+                                                    <td>Cell 3</td>
+                                                    <td>Cell 4</td>
+                                                    <td>Cell 5</td>
+                                                    <td>Cell 6</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -215,6 +219,7 @@
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/Sidebar-Menu.js"></script>
     <script src="assets/js/Table-with-search.js"></script>
     <script src="assets/js/Vertical-menu.js"></script>
