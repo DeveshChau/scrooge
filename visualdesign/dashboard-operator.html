@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>scrooge</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/Navigation-Clean1.css">
@@ -16,8 +16,8 @@
 
 <body style="color:#010101;background-color:#f5f8fa;">
     <header style="height:50px;background-color:#353842;">
-    <nav class="navbar navbar-default navigation-clean" style="padding: 10px 20px;height:50px;background-color:#D9230F;color:#eeeeee;box-shadow:0 0 2px 2px #C8C8C8;">
-        <div class="navbar-header"><a href="#" class="navbar-brand navbar-link" style="padding:6px;height:30px;margin:0px;">Innovation Healthcare System</a>
+    <nav class="navbar navbar-default navigation-clean" style="padding: 10px 20px;height:50px;background-color:#424242;color:#eeeeee;box-shadow:0 0 2px 2px #C8C8C8;">
+        <div class="navbar-header"><a href="#" class="navbar-brand navbar-link" style="padding:4px;height:25px;margin:0px;">Innovation Healthcare System</a>
             <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
         </div>
         <div class="collapse navbar-collapse" id="navcol-1">
@@ -36,8 +36,8 @@
             <div class="col-lg-3 col-md-12 col-md-3">
                 <section id="vertical-menu" style="margin:30px 0;">
                     <div class="list-group nav nav tab">
-                        <a href="#inquiry" class="list-group-item active" data-toggle="tab"> <i class="fa fa-question-circle fa-fw"></i> Inquiry</a>
-                        <a href="#appointments" class="list-group-item" data-toggle="tab"> <i class="fa fa-bookmark fa-fw"></i> Appointments</a>
+                        <a href="#inquiry" class="list-group-item" data-toggle="tab"> <i class="fa fa-question-circle fa-fw"></i> Inquiry</a>
+                        <a href="#appointments" class="list-group-item active" data-toggle="tab"> <i class="fa fa-bookmark fa-fw"></i> Appointments</a>
                         <a href="#followups" class="list-group-item" data-toggle="tab"> <i class="fa fa-info-circle fa-fw"></i> Followups</a>
                         <a href="#call-logs" class="list-group-item" data-toggle="tab"> <i class="fa fa-phone-square fa-fw"></i> Call Logs</a>
                     </div>
@@ -45,7 +45,7 @@
             </div>
             <div class="col-lg-9 col-md-12 col-md-9">
                 <section id="container" class="tab-content" style="margin:30px  0;padding:30px;">
-                    <div id="inquiry" class="tab-pane fade active in">
+                    <div id="inquiry" class="tab-pane fade">
                         <div id="new-inquiry-wrapper" class="wrapper hidden">
                             <div class="row">
                                 <div class="col-md-12">
@@ -158,7 +158,7 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="col-md-4" style="padding:0;height:40px;">
-                                    <div class="form-group pull-right">
+                                    <div class="form-group search">
     <input type="text" class="search form-control" placeholder="Search Inquiry">
 </div>
                                 </div>
@@ -207,8 +207,228 @@
                             </div>
                         </div>
                     </div>
-                    <div id="appointments" class="tab-pane fade">
-                        <h1>Appointments </h1></div>
+                    <div id="appointments" class="tab-pane fade active in">
+                        <div id="new-appointment-wrapper" class="wrapper">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form class="form-horizontal">
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <ul class="nav nav-tabs bread">
+    <li class="active"><a href="#patient-details" data-toggle="tab" aria-expanded="true"><span>Patient Details</span></a></li>
+    <li><a href="#doctor-details" data-toggle="tab" aria-expanded="false"><span>Doctor Details</span></a></li>
+    <li><a href="#appointment-summary" data-toggle="tab" aria-expanded="false"><span>Summary </span></a></li>
+</ul>
+                                                </div>
+                                            </div>
+                                            <div class="tab-content">
+                                                <div id="patient-details" class="tab-pane fade active in">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+  <label for="personName" class="col-lg-12">Person Name *</label>
+  <div class="col-lg-12">
+    <input class="form-control" id="personName" placeholder="Name" type="text">
+  </div>
+</div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+  <label for="contactNumber" class="col-lg-12">Contact Number *</label>
+  <div class="col-lg-12">
+    <input class="form-control" id="contactNumber" placeholder="Contact Number" type="text">
+  </div>
+</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+  <label for="personArea" class="col-lg-12">Area</label>
+  <div class="col-lg-12">
+    <input class="form-control" id="personArea" placeholder="Area" type="text">
+  </div>
+</div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+  <label for="personCity" class="col-lg-12">City *</label>
+  <div class="col-lg-12">
+    <input class="form-control" id="personCity" placeholder="City" type="text">
+  </div>
+</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+  <label for="hospital" class="col-lg-12">Hospital</label>
+  <div class="col-lg-12">
+        <select class="form-control" id="hospital">
+          <option>Hospital 1</option>
+          <option>Hospital 2</option>
+          <option>Hospital 3</option>
+          <option>Hospital 4</option>
+          <option>Hospital 5</option>
+        </select>
+  </div>
+</div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+  <label for="doctor" class="col-lg-12">Doctor</label>
+  <div class="col-lg-12">
+    <input class="form-control" id="doctor" placeholder="Doctor" type="text">
+  </div>
+</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+  <label for="inquiryDetails" class="col-lg-12">Inquiry Details</label>
+  <div class="col-lg-12">
+    <textarea class="form-control" rows="3" id="inquiryDetails" placeholder="Inquiry Details"></textarea>
+  </div>
+</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+    <div class="checkbox col-lg-12">
+      <label>
+        <input type="checkbox"> Follow Up required?
+      </label>
+    </div>
+</div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+    <div class="col-lg-12" style="text-align:right">
+        <button type="button" class="btn btn-default btn-cancel" style="margin-right:5px;">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Appointment</button>
+    </div>
+</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="doctor-details" class="tab-pane fade"></div>
+                                                <div id="appointment-summary" class="tab-pane fade"></div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="appointment-list-wrapper" class="wrapper hidden">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-4" style="height:40px;">
+                                    <button class="btn btn-default btn-primary" type="button" id="btn-new-appointment">New Appointment</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="col-md-4" style="padding:0;height:40px;">
+                                    <div class="form-group search">
+    <input type="text" class="search form-control" placeholder="Search: Enter Name">
+</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table table-striped table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Patient Name</th>
+                                                    <th>Hospital </th>
+                                                    <th>Doctor </th>
+                                                    <th>Department </th>
+                                                    <th>Date </th>
+                                                    <th>Time </th>
+                                                    <th>Booked by</th>
+                                                    <th>Last Followup</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Cell 1</td>
+                                                    <td>Cell 2</td>
+                                                    <td>Cell 3</td>
+                                                    <td>Cell 4</td>
+                                                    <td>Cell 5</td>
+                                                    <td>Cell 6</td>
+                                                    <td>Cell 7</td>
+                                                    <td>Cell 8</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cell 3</td>
+                                                    <td>Cell 4</td>
+                                                    <td>Cell 3</td>
+                                                    <td>Cell 4</td>
+                                                    <td>Cell 5</td>
+                                                    <td>Cell 6</td>
+                                                    <td>Cell 7</td>
+                                                    <td>Cell 8</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cell 1</td>
+                                                    <td>Cell 2</td>
+                                                    <td>Cell 3</td>
+                                                    <td>Cell 4</td>
+                                                    <td>Cell 5</td>
+                                                    <td>Cell 6</td>
+                                                    <td>Cell 7</td>
+                                                    <td>Cell 8</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cell 1</td>
+                                                    <td>Cell 2</td>
+                                                    <td>Cell 3</td>
+                                                    <td>Cell 4</td>
+                                                    <td>Cell 5</td>
+                                                    <td>Cell 6</td>
+                                                    <td>Cell 7</td>
+                                                    <td>Cell 8</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cell 1</td>
+                                                    <td>Cell 2</td>
+                                                    <td>Cell 3</td>
+                                                    <td>Cell 4</td>
+                                                    <td>Cell 5</td>
+                                                    <td>Cell 6</td>
+                                                    <td>Cell 7</td>
+                                                    <td>Cell 8</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cell 1</td>
+                                                    <td>Cell 2</td>
+                                                    <td>Cell 3</td>
+                                                    <td>Cell 4</td>
+                                                    <td>Cell 5</td>
+                                                    <td>Cell 6</td>
+                                                    <td>Cell 7</td>
+                                                    <td>Cell 8</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div id="followups" class="tab-pane fade">
                         <h1>Followups </h1></div>
                     <div id="call-logs" class="tab-pane fade">
