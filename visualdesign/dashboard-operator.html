@@ -35,12 +35,12 @@
         <div class="row">
             <div class="col-lg-3 col-md-12 col-md-3">
                 <section id="vertical-menu" style="margin:30px 0;">
-                    <div class="list-group nav nav-tabs">
-                        <a href="#inquiry" class="list-group-item active" data-toggle="tab"> <i class="fa fa-question-circle fa-fw"></i> Inquiry</a>
-                        <a href="#appointments" class="list-group-item" data-toggle="tab"> <i class="fa fa-bookmark fa-fw"></i> Appointments</a>
-                        <a href="#followups" class="list-group-item" data-toggle="tab"> <i class="fa fa-info-circle fa-fw"></i> Followups</a>
-                        <a href="#call-logs" class="list-group-item" data-toggle="tab"> <i class="fa fa-phone-square fa-fw"></i> Call Logs</a>
-                    </div>
+                    <ul id="main-menu" class="nav nav-pills nav-stacked" style="background-color:#fff; border-radius:5px; border:1px solid #d4d4d4;">
+  <li class="active" style="margin-top: 0px; border-bottom: 1px solid #d4d4d4;"><a href="#inquiry" data-toggle="tab" > <i class="fa fa-question-circle fa-fw"></i> Inquiry</a></li>
+  <li  style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#appointments" data-toggle="tab" > <i class="fa fa-bookmark fa-fw"></i> Appointments</a></li>
+  <li style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#followups" data-toggle="tab" > <i class="fa fa-info-circle fa-fw"></i> Followups</a></li>
+  <li style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#call-logs" data-toggle="tab" > <i class="fa fa-phone-square fa-fw"></i> Call Logs</a></li>
+</ul>
                 </section>
             </div>
             <div class="col-lg-9 col-md-12 col-md-9">
@@ -135,7 +135,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
     <div class="col-lg-12" style="text-align:right">
-        <button type="button" class="btn btn-default btn-cancel" style="margin-right:5px;">Cancel</button>
+        <button type="button" id="new-inquiry-btn-cancel" class="btn btn-default" style="margin-right:5px;">Cancel</button>
         <button type="submit" class="btn btn-primary">Save Inquiry</button>
     </div>
 </div>
@@ -208,7 +208,7 @@
                         </div>
                     </div>
                     <div id="appointments" class="tab-pane fade">
-                        <div id="new-appointment-wrapper" class="wrapper">
+                        <div id="new-appointment-wrapper" class="wrapper hidden">
                             <div class="row">
                                 <div class="col-md-12">
                                     <form class="form-horizontal">
@@ -216,9 +216,9 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <ul class="nav nav-tabs bread" id="appointment-breadcrumb">
-    <li class="active"><a href="#patient-details" data-toggle="tab" aria-expanded="true"><span>Patient Details</span></a></li>
-    <li><a href="#doctor-details" data-toggle="tab" aria-expanded="false"><span>Doctor Details</span></a></li>
-    <li><a href="#appointment-summary" data-toggle="tab" aria-expanded="false"><span>Summary </span></a></li>
+    <li class="active"><a style="cursor:default; color: #505050;" href="#patient-details" aria-expanded="true"><span>Patient Details</span></a></li>
+    <li><a href="#doctor-details"  style="cursor:default; color: #505050;" aria-expanded="false"><span>Doctor Details</span></a></li>
+    <li><a href="#appointment-summary"  style="cursor:default; color: #505050;" aria-expanded="false"><span>Summary </span></a></li>
 </ul>
                                                 </div>
                                             </div>
@@ -305,6 +305,7 @@
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
     <div class="col-lg-12" style="text-align:right">
+        <button type="button" class="btn btn-default btn-cancel" style="margin-right:5px;">Cancel</button>
         <button type="button" class="btn btn-primary" id="patient-btn-next">Next</button>
     </div>
 </div>
@@ -324,22 +325,6 @@
 </div>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <div class="form-group">
-  <label for="specialityInput" class="col-lg-12">Speciality</label>
-  <div class="col-lg-12">
-    <select class="form-control" id="specialityInput">
-      <option>Speciality 1</option>
-      <option>Speciality 2</option>
-      <option>Speciality 3</option>
-      <option>Speciality 4</option>
-      <option>Speciality 5</option>
-    </select>
-  </div>
-</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
                                                                 <div class="form-group row">
   <label for="doctorName" class="col-lg-12">Doctor</label>
   <div class="col-lg-10">
@@ -352,16 +337,11 @@
     </select>
   </div>
     <div class="col-lg-2">
-    <i class="glyphicon glyphicon-calendar" style="font-size:35px;"></i>
+        <button type="button" class="btn btn-default" id="btn-doctor-calendar">
+        <i class="glyphicon glyphicon-th"></i>
+        </button>
+<!--     <i class="glyphicon glyphicon-calendar" style="font-size:35px;"></i> -->
     </div>
-</div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-  <label for="appointmentType" class="col-lg-12">Appointment Type</label>
-  <div class="col-lg-12">
-    <input class="form-control" id="appointmentType" placeholder="Appointment Type Preselected" type="text">
-  </div>
 </div>
                                                             </div>
                                                         </div>
@@ -412,6 +392,8 @@
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
     <div class="col-lg-12" style="text-align:right">
+                <button type="button" class="btn btn-default btn-cancel" style="margin-right:5px;">Cancel</button>
+
         <button type="button" class="btn btn-primary"  id="doctor-btn-next">Next</button>
     </div>
 </div>
@@ -498,6 +480,8 @@
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
     <div class="col-lg-12" style="text-align:right">
+                <button type="button" class="btn btn-default btn-cancel" style="margin-right:5px;">Cancel</button>
+
         <button type="form" class="btn btn-primary" id="summary-btn-save">Save</button>
     </div>
 </div>
@@ -511,7 +495,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="appointment-list-wrapper" class="wrapper hidden">
+                        <div id="appointment-list-wrapper" class="wrapper">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div></div>
@@ -619,7 +603,7 @@
                         </div>
                     </div>
                     <div id="followups" class="tab-pane fade">
-                        <div id="follow-ups-wrapper-list" class="wrapper">
+                        <div id="follow-ups-wrapper-list">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="clearfix"></div>
@@ -740,7 +724,7 @@
                         </div>
                     </div>
                     <div id="call-logs" class="tab-pane fade">
-                        <div id="call-log-wrapper-list" class="wrapper">
+                        <div id="call-log-wrapper-list">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="clearfix"></div>

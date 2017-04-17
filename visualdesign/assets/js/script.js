@@ -1,4 +1,9 @@
 $(function(){
+    
+    $("#appointment-breadcrumb a").on('click', function(){
+        return false;
+    })
+    
     $("#btn-new-inquiry").on('click', function(){
         // $("#inquiry-list-wrapper").toggleClass("hidden");
         // $("#new-inquiry-wrapper").toggleClass("hidden");
@@ -13,7 +18,13 @@ $(function(){
     
     
     $(".btn-cancel").on('click', function(){
-        $(this).parents("#container").find(".wrapper").toggleClass("hidden");
+        $("#appointment-list-wrapper").toggleClass("hidden");
+        $("#new-appointment-wrapper").toggleClass("hidden");
+    });
+    
+    $("#new-inquiry-btn-cancel").on('click', function(){
+        $("#new-inquiry-wrapper").toggleClass("hidden");
+        $("#inquiry-list-wrapper").toggleClass("hidden");
     });
     
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
@@ -39,5 +50,8 @@ $(function(){
     });
     
     $('.input-daterange').datepicker({
+    });    
+    
+    $('#btn-doctor-calendar').datepicker({
     });
 });
