@@ -33,23 +33,23 @@
 </header>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3 col-md-12 col-md-3">
-                <section id="vertical-menu" style="margin:30px 0;">
+            <div class="col-lg-3 col-md-12 col-md-3" style="padding-right:0;">
+                <section id="vertical-menu" style="margin:20px 0;">
                     <ul id="main-menu" class="nav nav-pills nav-stacked" style="background-color:#fff; border-radius:5px; border:1px solid #d4d4d4;">
   <li class="active" style="margin-top: 0px; border-bottom: 1px solid #d4d4d4;"><a href="#inquiry" data-toggle="tab" > <i class="fa fa-question-circle fa-fw"></i> Inquiry</a></li>
   <li  style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#appointments" data-toggle="tab" > <i class="fa fa-bookmark fa-fw"></i> Appointments</a></li>
-  <li style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#followups" data-toggle="tab" > <i class="fa fa-info-circle fa-fw"></i> Followups</a></li>
+  <li style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#followups" data-toggle="tab" > <i class="fa fa-info-circle fa-fw"></i> Followups &nbsp;&nbsp;<span class="badge">3</span></a></li>
   <li style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#call-logs" data-toggle="tab" > <i class="fa fa-phone-square fa-fw"></i> Call Logs</a></li>
 </ul>
                 </section>
             </div>
             <div class="col-lg-9 col-md-12 col-md-9">
-                <section id="container" class="tab-content" style="margin:30px  0;padding:30px;">
+                <section id="container" class="tab-content" style="margin:20px  0;padding:30px;">
                     <div id="inquiry" class="tab-pane fade active in">
                         <div id="new-inquiry-wrapper" class="wrapper hidden">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form class="form-horizontal">
+                                    <form id="form-new-inquiry" class="form-horizontal">
                                         <fieldset>
                                             <legend><strong>New Inquiry</strong></legend>
                                             <div class="row">
@@ -159,7 +159,10 @@
                                 </div>
                                 <div class="col-md-4" style="padding:0;height:40px;">
                                     <div class="form-group search">
-    <input type="text" class="search form-control" placeholder="Search Inquiry">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+        <input style="display:inline-block;" type="text" class="search form-control" placeholder="Search Inquiry">
+    </div>
 </div>
                                 </div>
                                 <div class="col-md-12">
@@ -211,7 +214,7 @@
                         <div id="new-appointment-wrapper" class="wrapper hidden">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form class="form-horizontal">
+                                    <form id="form-appointments" class="form-horizontal">
                                         <fieldset>
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -327,21 +330,20 @@
                                                             <div class="col-md-6">
                                                                 <div class="form-group row">
   <label for="doctorName" class="col-lg-12">Doctor</label>
-  <div class="col-lg-10">
-    <select class="form-control" id="doctorName">
-      <option>Doctor 1</option>
-      <option>Doctor 2</option>
-      <option>Doctor 3</option>
-      <option>Doctor 4</option>
-      <option>Doctor 5</option>
-    </select>
-  </div>
-    <div class="col-lg-2">
-        <button type="button" class="btn btn-default" id="btn-doctor-calendar">
+  <div class="col-lg-12">
+      <div class="input-group">
+        <select class="form-control" id="doctorName">
+          <option>Doctor 1</option>
+          <option>Doctor 2</option>
+          <option>Doctor 3</option>
+          <option>Doctor 4</option>
+          <option>Doctor 5</option>
+        </select>
+          <span type="button" class="input-group-addon" id="btn-doctor-calendar" style="cursor:pointer;">
         <i class="glyphicon glyphicon-th"></i>
-        </button>
-<!--     <i class="glyphicon glyphicon-calendar" style="font-size:35px;"></i> -->
-    </div>
+        </span>
+      </div>
+  </div>
 </div>
                                                             </div>
                                                         </div>
@@ -508,7 +510,10 @@
                                 </div>
                                 <div class="col-md-4" style="padding:0;height:40px;">
                                     <div class="form-group search">
-    <input type="text" class="search form-control" placeholder="Search: Enter Name">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+        <input style="display:inline-block;" type="text" class="search form-control" placeholder="Search Appointment">
+    </div>
 </div>
                                 </div>
                                 <div class="col-md-12">
@@ -605,23 +610,29 @@
                     <div id="followups" class="tab-pane fade">
                         <div id="follow-ups-wrapper-list">
                             <div class="row">
-                                <div class="col-md-8">
+                                <div class="col-md-7">
                                     <div class="clearfix"></div>
                                 </div>
-                                <div class="col-md-4" style="padding:0;height:40px;">
-                                    <div class="form-group search">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Select Dates</label>
-    <div class="col-lg-10" style="text-align:right">
-     <div class="input-daterange input-group" id="datepicker">
-        <input type="text" class="input-sm form-control" name="start" />
-        <span class="input-group-addon">to</span>
-        <input type="text" class="input-sm form-control" name="end" />
-     </div>
+                                <div class="col-md-5" style="padding:0;height:40px;">
+                                    <div class="form-group">
+    <div class="col-lg-12">
+     <div class="input-daterange input-group" id="datepicker-followups">
+        <input type="text" class="input form-control" name="start" placeholder="Start Date">
+        <span class="input-group-addon">&nbsp;to&nbsp;</span>
+        <input type="text" class="input form-control" name="end" placeholder="End Date">
+        <span type="button" class="input-group-addon" style="border-right: 1px solid #ccc;
+cursor: pointer;">
+            &nbsp;&nbsp;<i class="glyphicon glyphicon-search"></i>&nbsp;&nbsp;Search&nbsp;&nbsp;
+        </span>
+        </div>
+        
     </div>
+<!--     <div class="col-lg-4">
+        <button type="button" class="btn btn-primary">
+            <i class="glyphicon glyphicon-search"></i> &nbsp;&nbsp;Search
+        </button>
+    </div> -->
 </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <hr style="margin:40px 0 0;">
                                 </div>
                             </div>
                             <div class="row">
@@ -726,23 +737,29 @@
                     <div id="call-logs" class="tab-pane fade">
                         <div id="call-log-wrapper-list">
                             <div class="row">
-                                <div class="col-md-8">
+                                <div class="col-md-7">
                                     <div class="clearfix"></div>
                                 </div>
-                                <div class="col-md-4" style="padding:0;height:40px;">
-                                    <div class="form-group search">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Select Dates</label>
-    <div class="col-lg-10" style="text-align:right">
-     <div class="input-daterange input-group" id="datepicker">
-        <input type="text" class="input-sm form-control" name="start" />
-        <span class="input-group-addon">to</span>
-        <input type="text" class="input-sm form-control" name="end" />
-     </div>
+                                <div class="col-md-5" style="padding:0;height:40px;">
+                                    <div class="form-group">
+    <div class="col-lg-12">
+     <div class="input-daterange input-group" id="datepicker-call-logs">
+        <input type="text" class="input form-control" name="start" placeholder="Start Date">
+        <span class="input-group-addon">&nbsp;to&nbsp;</span>
+        <input type="text" class="input form-control" name="end" placeholder="End Date">
+        <span type="button" class="input-group-addon" style="border-right: 1px solid #ccc;
+cursor: pointer;">
+            &nbsp;&nbsp;<i class="glyphicon glyphicon-search"></i>&nbsp;&nbsp;Search&nbsp;&nbsp;
+        </span>
+        </div>
+        
     </div>
+<!--     <div class="col-lg-4">
+        <button type="button" class="btn btn-primary">
+            <i class="glyphicon glyphicon-search"></i> &nbsp;&nbsp;Search
+        </button>
+    </div> -->
 </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <hr style="margin:40px 0 0;">
                                 </div>
                             </div>
                             <div class="row">

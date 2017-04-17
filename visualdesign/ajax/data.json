@@ -1,0 +1,21 @@
+{
+	"hospitalID": "1234",
+	"hospitalName": "Apollo Hospital Pune",
+	"doctors": [
+		{
+			"doctorID": "1",
+			"doctorName": "Pawan Matakar",
+			"speciality": "General Physician"
+		},
+		{
+			"doctorID": "2",
+			"doctorName": "Anjali Matakar",
+			"speciality": "Gynecologist"			
+		},
+		{
+			"doctorID": "3",
+			"doctorName": "Vaibhav Vanhale",
+			"speciality": "Gynecologist"			
+		}
+	]
+}
