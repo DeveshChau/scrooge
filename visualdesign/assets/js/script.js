@@ -21,4 +21,23 @@ $(function(){
       // $("#inquiry-list-wrapper").toggleClass("hidden");
       // $("#new-inquiry-wrapper").toggleClass("hidden");
     });
+    
+    $("#summary-btn-back").on('click', function(){
+        $('#appointment-breadcrumb a[href="#doctor-details"]').tab('show');
+    });
+    
+    $("#doctor-btn-next").on('click', function(){
+        $('#appointment-breadcrumb a[href="#appointment-summary"]').tab('show');
+    });    
+    
+    $("#patient-btn-next").on('click', function(){
+        $('#appointment-breadcrumb a[href="#doctor-details"]').tab('show');
+    });
+    
+    $("#doctor-btn-back").on('click', function(){
+        $('#appointment-breadcrumb a[href="#patient-details"]').tab('show');
+    });
+    
+    $('.input-daterange').datepicker({
+    });
 });
