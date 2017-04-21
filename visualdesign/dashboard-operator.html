@@ -49,7 +49,7 @@
                         <div id="new-inquiry-wrapper" class="wrapper hidden">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form id="form-new-inquiry" class="form-horizontal">
+                                    <form id="form-new-inquiry" class="form-horizontal" role="form" data-toggle="validator">
                                         <fieldset>
                                             <legend><strong>New Inquiry</strong></legend>
                                             <div class="row">
@@ -57,7 +57,7 @@
                                                     <div class="form-group">
   <label for="personName" class="col-lg-12">Person Name *</label>
   <div class="col-lg-12">
-    <input class="form-control" id="personName" placeholder="Name" type="text">
+    <input class="form-control" id="personName" placeholder="Name" type="text" required>
   </div>
 </div>
                                                 </div>
@@ -65,7 +65,7 @@
                                                     <div class="form-group">
   <label for="contactNumber" class="col-lg-12">Contact Number *</label>
   <div class="col-lg-12">
-    <input class="form-control" id="contactNumber" placeholder="Contact Number" type="text">
+    <input class="form-control" id="contactNumber" placeholder="Contact Number" type="text" pattern="/^(\([0-9]{3}\)\s*|[0-9]{3}\-)[0-9]{3}-[0-9]{4}$/">
   </div>
 </div>
                                                 </div>
@@ -797,6 +797,7 @@ cursor: pointer;">
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bootstrap-datepicker.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/validator.js"></script>
 </body>
 
 </html>

@@ -48,16 +48,7 @@ $(function(){
         $('#appointment-breadcrumb a[href="#doctor-details"]').tab('show');
         
         $.getJSON( "ajax/data.json", function( data ) {
-            console.log(data.hospitalID);
-            $("#hospitalName").val(data.hospitalName);
-            $("#hospitalName").attr("data-hospitalID", data.hospitalID);
-
-            var doctors = [];
-            for (var i = 0; i < data.doctors.length; i++) {
-                doctors.push( "<option id='" + data.doctors[i].doctorID + "'>" + data.doctors[i].doctorName + "  (" + data.doctors[i].speciality + ")" + "</option>" );
-            }
-
-            $("#doctorName").html(doctors.join(""));
+            console.log(data);
         });
     });
     
