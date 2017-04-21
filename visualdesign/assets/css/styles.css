@@ -10,3 +10,9 @@
   border-radius:0 !important;
 }
 
+#appointment-breadcrumb a:hover {
+  border-left-color:transparent;
+  border-top-color:transparent;
+  border-right-color:transparent;
+}
+
