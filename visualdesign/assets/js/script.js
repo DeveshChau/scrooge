@@ -74,4 +74,43 @@ $(function(){
           }
         });
     });
-});
+
+
+    $('#saveInquiry').on('click', function(){
+        var data = $("#form-new-inquiry").serializeArray();        
+        var dataOject = objectifyForm(data);    
+        $.ajax({
+            type: "POST",
+            url: "",
+            data: dataOject,
+            success: function(data) {
+            console.log("returnedData", data);
+          }
+        });
+    });
+
+    $('#summary-btn-save').on('click', function(){
+        var data = $("#form-appointments").serializeArray();        
+        var dataOject = objectifyForm(data);    
+        $.ajax({
+            type: "POST",
+            url: "",
+            data: dataOject,
+            success: function(data) {
+            console.log("returnedData", data);
+          }
+        });
+    });
+
+    function objectifyForm(formArray) {//serialize data function
+
+        var returnArray = {};
+        for (var i = 0; i < formArray.length; i++){
+        returnArray[formArray[i]['name']] = formArray[i]['value'];
+        }
+        console.log(returnArray);
+        return returnArray;
+    }
+
+}); 
+    
