@@ -74,4 +74,32 @@ $(function(){
           }
         });
     });
+
+    /* devesh save inquiry start*/
+    $('#save-inquiry').on('click', function(e){
+        var personName = $("#personName").val();
+        var contactNumber = $("#contactNumber").val();
+        var personArea = $("#personArea").val();
+        var hospital = $("#hospital").val();
+        var doctor = $("#doctor").val();
+        var inquiryDetails = $("#inquiryDetails").val();
+        var followUpRequired = $("#followUpRequired").val();
+        $.ajax({
+            type: "POST",
+            url: "",
+            data: {
+                personName: personName,
+                contactNumber: contactNumber,
+                personArea: personArea,
+                hospital: hospital,
+                doctor: doctor,
+                inquiryDetails: inquiryDetails,
+                followUpRequired: followUpRequired
+            },
+            success: function(data) {
+                console.log("returnedData", data);
+            }
+        });
+    });
+    /* devesh save inquiry end*/
 });
