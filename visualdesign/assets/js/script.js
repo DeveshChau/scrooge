@@ -84,7 +84,7 @@ $(function(){
         var doctor = $("#doctor").val();
         var inquiryDetails = $("#inquiryDetails").val();
         var followUpRequired = $("#followUpRequired").val();
-        $ajax({
+        $.ajax({
             type: "POST",
             url: "",
             data: {
