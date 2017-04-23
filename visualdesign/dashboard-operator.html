@@ -36,11 +36,11 @@
             <div class="col-lg-3 col-md-12 col-md-3" style="padding-right:0;">
                 <section id="vertical-menu" style="margin:20px 0;">
                     <ul id="main-menu" class="nav nav-pills nav-stacked" style="background-color:#fff; border-radius:5px; border:1px solid #d4d4d4;">
-  <li class="active" style="margin-top: 0px; border-bottom: 1px solid #d4d4d4;"><a href="#inquiry" data-toggle="tab" > <i class="fa fa-question-circle fa-fw"></i> Inquiry</a></li>
-  <li  style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#appointments" data-toggle="tab" > <i class="fa fa-bookmark fa-fw"></i> Appointments</a></li>
-  <li style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#followups" data-toggle="tab" > <i class="fa fa-info-circle fa-fw"></i> Followups &nbsp;&nbsp;<span class="badge">3</span></a></li>
-  <li style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#call-logs" data-toggle="tab" > <i class="fa fa-phone-square fa-fw"></i> Call Logs</a></li>
-</ul>
+                          <li class="active" style="margin-top: 0px; border-bottom: 1px solid #d4d4d4;"><a href="#inquiry" data-toggle="tab" > <i class="fa fa-question-circle fa-fw"></i> Inquiry</a></li>
+                          <li  style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#appointments" data-toggle="tab" > <i class="fa fa-bookmark fa-fw"></i> Appointments</a></li>
+                          <li style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#followups" data-toggle="tab" > <i class="fa fa-info-circle fa-fw"></i> Followups &nbsp;&nbsp;<span class="badge">3</span></a></li>
+                          <li style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#call-logs" data-toggle="tab" > <i class="fa fa-phone-square fa-fw"></i> Call Logs</a></li>
+                    </ul>
                 </section>
             </div>
             <div class="col-lg-9 col-md-12 col-md-9">
@@ -49,25 +49,25 @@
                         <div id="new-inquiry-wrapper" class="wrapper hidden">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form id="form-new-inquiry" class="form-horizontal" role="form" data-toggle="validator">
+                                    <form id="form-new-inquiry" name="form-new-inquiry" class="form-horizontal" role="form" data-toggle="validator" onsubmit='return onSubmit(this)'>
                                         <fieldset>
                                             <legend><strong>New Inquiry</strong></legend>
-                                            <div class="row">
+                                            <div class="row" >
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-  <label for="personName" class="col-lg-12">Person Name *</label>
-  <div class="col-lg-12">
-    <input class="form-control" id="personName" placeholder="Name" type="text" required>
-  </div>
-</div>
+                                                        <label for="personName" class="col-lg-12">Person Name *</label>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" id="personName" placeholder="Name" type="text" name="personName" required>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-  <label for="contactNumber" class="col-lg-12">Contact Number *</label>
-  <div class="col-lg-12">
-    <input class="form-control" id="contactNumber" placeholder="Contact Number" type="text" pattern="/^(\([0-9]{3}\)\s*|[0-9]{3}\-)[0-9]{3}-[0-9]{4}$/">
-  </div>
-</div>
+                                                        <label for="contactNumber" class="col-lg-12">Contact Number *</label>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" id="contactNumber" placeholder="Contact Number" type="text" name="contactNumber" pattern="/^(\([0-9]{3}\)\s*|[0-9]{3}\-)[0-9]{3}-[0-9]{4}$/">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -75,7 +75,7 @@
                                                     <div class="form-group">
   <label for="personArea" class="col-lg-12">Area</label>
   <div class="col-lg-12">
-    <input class="form-control" id="personArea" placeholder="Area" type="text">
+    <input class="form-control" id="personArea" placeholder="Area" name="personArea" type="text">
   </div>
 </div>
                                                 </div>
@@ -83,7 +83,7 @@
                                                     <div class="form-group">
   <label for="personCity" class="col-lg-12">City *</label>
   <div class="col-lg-12">
-    <input class="form-control" id="personCity" placeholder="City" type="text">
+    <input class="form-control" id="personCity" placeholder="City" name="personCity" type="text">
   </div>
 </div>
                                                 </div>
@@ -93,7 +93,7 @@
                                                     <div class="form-group">
   <label for="hospital" class="col-lg-12">Hospital</label>
   <div class="col-lg-12">
-        <select class="form-control" id="hospital">
+        <select class="form-control" id="hospital" name="hospital">
           <option>Hospital 1</option>
           <option>Hospital 2</option>
           <option>Hospital 3</option>
@@ -107,7 +107,7 @@
                                                     <div class="form-group">
   <label for="doctor" class="col-lg-12">Doctor</label>
   <div class="col-lg-12">
-    <input class="form-control" id="doctor" placeholder="Doctor" type="text">
+    <input class="form-control" id="doctor" placeholder="Doctor" name="doctor" type="text">
   </div>
 </div>
                                                 </div>
@@ -117,7 +117,7 @@
                                                     <div class="form-group">
   <label for="inquiryDetails" class="col-lg-12">Inquiry Details</label>
   <div class="col-lg-12">
-    <textarea class="form-control" rows="3" id="inquiryDetails" placeholder="Inquiry Details"></textarea>
+    <textarea class="form-control" rows="3" id="inquiryDetails" name="inquiryDetails" placeholder="Inquiry Details"></textarea>
   </div>
 </div>
                                                 </div>
@@ -127,7 +127,7 @@
                                                     <div class="form-group">
     <div class="checkbox col-lg-12">
       <label>
-        <input type="checkbox" id="followUpRequired"> Follow Up required?
+        <input type="checkbox" id="followUpRequired" name="followUpRequired"> Follow Up required?
       </label>
     </div>
 </div>
