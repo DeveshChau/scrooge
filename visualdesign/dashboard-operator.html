@@ -34,11 +34,11 @@
             <div class="col-lg-3 col-md-12 col-md-3" style="padding-right:0;">
                 <section id="vertical-menu" style="margin:20px 0;">
                     <ul id="main-menu" class="nav nav-pills nav-stacked" style="background-color:#fff; border-radius:5px; border:1px solid #d4d4d4;">
-  <li class="active" style="margin-top: 0px; border-bottom: 1px solid #d4d4d4;"><a href="#inquiry" data-toggle="tab" > <i class="fa fa-question-circle fa-fw"></i> Inquiry</a></li>
-  <li  style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#appointments" data-toggle="tab" > <i class="fa fa-bookmark fa-fw"></i> Appointments</a></li>
-  <li style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#followups" data-toggle="tab" > <i class="fa fa-info-circle fa-fw"></i> Followups &nbsp;&nbsp;<span class="badge">3</span></a></li>
-  <li style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#call-logs" data-toggle="tab" > <i class="fa fa-phone-square fa-fw"></i> Call Logs</a></li>
-</ul>
+                          <li class="active" style="margin-top: 0px; border-bottom: 1px solid #d4d4d4;"><a href="#inquiry" data-toggle="tab" > <i class="fa fa-question-circle fa-fw"></i> Inquiry</a></li>
+                          <li  style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#appointments" data-toggle="tab" > <i class="fa fa-bookmark fa-fw"></i> Appointments</a></li>
+                          <li style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#followups" data-toggle="tab" > <i class="fa fa-info-circle fa-fw"></i> Followups &nbsp;&nbsp;<span class="badge">3</span></a></li>
+                          <li style="margin-top: 0px; border-bottom: 1px solid #d4d4d4; "><a href="#call-logs" data-toggle="tab" > <i class="fa fa-phone-square fa-fw"></i> Call Logs</a></li>
+                    </ul>
                 </section>
             </div>
             <div class="col-lg-9 col-md-12 col-md-9">
@@ -47,96 +47,98 @@
                         <div id="new-inquiry-wrapper" class="wrapper hidden">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form id="form-new-inquiry" class="form-horizontal" role="form" data-toggle="validator">
+                                    <form id="form-new-inquiry" name="form-new-inquiry" class="form-horizontal" role="form" data-toggle="validator">
                                         <fieldset>
                                             <legend><strong>New Inquiry</strong></legend>
-                                            <div class="row">
+                                            <div class="row" >
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-  <label for="personName" class="col-lg-12">Person Name *</label>
-  <div class="col-lg-12">
-    <input class="form-control" id="personName" placeholder="Name" type="text" required>
-  </div>
-</div>
+                                                        <label for="Patient_Name" class="col-lg-12">Patient Name *</label>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" id="Patient_Name" placeholder="Name" type="text" name="Patient_Name" required>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-  <label for="contactNumber" class="col-lg-12">Contact Number *</label>
-  <div class="col-lg-12">
-    <input class="form-control" id="contactNumber" placeholder="Contact Number" type="text" pattern="/^(\([0-9]{3}\)\s*|[0-9]{3}\-)[0-9]{3}-[0-9]{4}$/">
-  </div>
-</div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-  <label for="personArea" class="col-lg-12">Area</label>
-  <div class="col-lg-12">
-    <input class="form-control" id="personArea" placeholder="Area" type="text">
-  </div>
-</div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-  <label for="personCity" class="col-lg-12">City *</label>
-  <div class="col-lg-12">
-    <input class="form-control" id="personCity" placeholder="City" type="text">
-  </div>
-</div>
+                                                        <label for="Patient_Contact" class="col-lg-12">Contact Number *</label>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" id="Patient_Contact" placeholder="Contact Number" type="text" name="Patient_Contact" pattern="/^(\([0-9]{3}\)\s*|[0-9]{3}\-)[0-9]{3}-[0-9]{4}$/">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-  <label for="hospital" class="col-lg-12">Hospital</label>
-  <div class="col-lg-12">
-        <select class="form-control" id="hospital">
-          <option>Hospital 1</option>
-          <option>Hospital 2</option>
-          <option>Hospital 3</option>
-          <option>Hospital 4</option>
-          <option>Hospital 5</option>
-        </select>
-  </div>
-</div>
+                                                        <label for="Patient_Area" class="col-lg-12">Area</label>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" id="Patient_Area" placeholder="Area" name="Patient_Area" type="text">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-  <label for="doctor" class="col-lg-12">Doctor</label>
-  <div class="col-lg-12">
-    <input class="form-control" id="doctor" placeholder="Doctor" type="text">
-  </div>
-</div>
+                                                        <label for="Patient_City" class="col-lg-12">City *</label>
+                                                        <div class="col-lg-12">
+                                                            <input class="form-control" id="Patient_City" placeholder="City" name="Patient_City" type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="Hospital_ID" class="col-lg-12">Hospital</label>
+                                                        <div class="col-lg-12">
+                                                            <select class="form-control" id="Hospital_ID" name="hospital">
+                                                              <option>Hospital 1</option>
+                                                              <option>Hospital 2</option>
+                                                              <option>Hospital 3</option>
+                                                              <option>Hospital 4</option>
+                                                              <option>Hospital 5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="Doctor_ID" class="col-lg-12">Doctor</label>
+                                                        <div class="col-lg-12">
+                                                        <input class="form-control" id="Doctor_ID" placeholder="Doctor" name="doctor" type="text">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-  <label for="inquiryDetails" class="col-lg-12">Inquiry Details</label>
-  <div class="col-lg-12">
-    <textarea class="form-control" rows="3" id="inquiryDetails" placeholder="Inquiry Details"></textarea>
-  </div>
-</div>
+                                                        <label for="Inquiry_Details" class="col-lg-12">Inquiry Details</label>
+                                                        <div class="col-lg-12">
+                                                        <textarea class="form-control" rows="3" id="Inquiry_Details" name="Inquiry_Details" placeholder="Inquiry Details"></textarea>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-    <div class="checkbox col-lg-12">
-      <label>
-        <input type="checkbox"> Follow Up required?
-      </label>
-    </div>
-</div>
+                                                        <div class="checkbox col-lg-12">
+                                                          <label>
+
+                                                            <input type="checkbox" id="Follow_Up_Required" name="Follow_Up_Required"> Follow Up required?
+
+                                                          </label>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-    <div class="col-lg-12" style="text-align:right">
-        <button type="button" id="new-inquiry-btn-cancel" class="btn btn-default" style="margin-right:5px;">Cancel</button>
-        <button type="submit" class="btn btn-primary">Save Inquiry</button>
-    </div>
-</div>
+                                                        <div class="col-lg-12" style="text-align:right">
+                                                        <button type="button" id="New_Inquiry_Btn_Cancel" class="btn btn-default" style="margin-right:5px;">Cancel</button>
+                                                        <button id="Save_Inquiry" type="submit" class="btn btn-primary">Save Inquiry</button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </fieldset>
@@ -157,11 +159,11 @@
                                 </div>
                                 <div class="col-md-4" style="padding:0;height:40px;">
                                     <div class="form-group search">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-        <input style="display:inline-block;" type="text" class="search form-control" placeholder="Search Inquiry">
-    </div>
-</div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                                            <input style="display:inline-block;" type="text" class="search form-control" placeholder="Search Inquiry">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div></div>
@@ -229,17 +231,35 @@
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-  <label for="patientName" class="col-lg-12">Patient Name *</label>
+                                                                    <label for="Patient_Name" class="col-lg-12">Patient Name *</label>
+                                                                    <div class="col-lg-12">
+                                                        <input class="form-control" id="Patient_Name" laceholder="Name" name="Patient_Name" type="text">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="Patient_Contact" class="col-lg-12">Contact Number *</label>
+                                                                    <div class="col-lg-12">
+                                                                    <input class="form-control" id="Patient_Contact" placeholder="Contact Number" name="Patient_Contact" type="text">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+  <label for="Patient_Email" class="col-lg-12">Email</label>
   <div class="col-lg-12">
-    <input class="form-control" id="patientName" placeholder="Name" type="text">
+    <input class="form-control" id="Patient_Email" placeholder="Email" name="Patient_Email" type="email">
   </div>
 </div>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-  <label for="contactNumber" class="col-lg-12">Contact Number *</label>
+  <label for="Patient_City" class="col-lg-12">City *</label>
   <div class="col-lg-12">
-    <input class="form-control" id="contactNumber" placeholder="Contact Number" type="text">
+    <input class="form-control" id="Patient_City" placeholder="City" name="Patient_City" type="text">
   </div>
 </div>
                                                             </div>
@@ -247,35 +267,17 @@
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-  <label for="personEmail" class="col-lg-12">Email</label>
+  <label for="Patient_Area" class="col-lg-12">Area</label>
   <div class="col-lg-12">
-    <input class="form-control" id="personEmail" placeholder="Email" type="email">
+    <input class="form-control" id="Patient_Area" placeholder="Area" name="Patient_Area" type="text">
   </div>
 </div>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-  <label for="personCity" class="col-lg-12">City *</label>
+  <label for="Appointment_Reason" class="col-lg-12">Appointment Reason</label>
   <div class="col-lg-12">
-    <input class="form-control" id="personCity" placeholder="City" type="text">
-  </div>
-</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-  <label for="patientArea" class="col-lg-12">Area</label>
-  <div class="col-lg-12">
-    <input class="form-control" id="patientArea" placeholder="Area" type="text">
-  </div>
-</div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-  <label for="appointmentReason" class="col-lg-12">Appointment Reason</label>
-  <div class="col-lg-12">
-        <select class="form-control" id="appointmentReason">
+        <select class="form-control" id="Appointment_Reason" name="Appointment_Reason">
           <option>Appointment reason</option>
           <option>Appointment reason</option>
           <option>Appointment reason</option>
@@ -291,7 +293,7 @@
                                                                 <div class="form-group">
   <label for="notes" class="col-lg-12">Notes</label>
   <div class="col-lg-12">
-    <textarea class="form-control" rows="2" id="notes" placeholder="Notes for patient appointment"></textarea>
+    <textarea class="form-control" rows="2" id="notes" name="notes" placeholder="Notes for patient appointment"></textarea>
   </div>
 </div>
                                                             </div>
@@ -307,7 +309,7 @@
                                                                 <div class="form-group">
     <div class="col-lg-12" style="text-align:right">
         <button type="button" class="btn btn-default btn-cancel" style="margin-right:5px;">Cancel</button>
-        <button type="button" class="btn btn-primary" id="patient-btn-next">Next</button>
+        <button type="button" class="btn btn-primary" id="patient-btn-next" name="patient-btn-next">Next</button>
     </div>
 </div>
                                                             </div>
@@ -319,18 +321,18 @@
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
-  <label for="hospitalName" class="col-lg-12">Hospital</label>
+  <label for="Hospital_Name" class="col-lg-12">Hospital</label>
   <div class="col-lg-12">
-    <input class="form-control" id="hospitalName" placeholder="Hospital" type="text">
+    <input class="form-control" id="Hospital_Name" placeholder="Hospital" name="Hospital_Name" type="text">
   </div>
 </div>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <div class="form-group row">
-  <label for="doctorName" class="col-lg-12">Doctor</label>
+  <label for="Doctor_Name" class="col-lg-12">Doctor</label>
   <div class="col-lg-12">
       <div>
-        <select class="form-control" id="doctorName">
+        <select class="form-control" id="Doctor_Name">
           <option>Doctor 1</option>
           <option>Doctor 2</option>
           <option>Doctor 3</option>
@@ -343,10 +345,10 @@
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <div class="form-group row">
-  <label for="doctorName" class="col-lg-12">Date</label>
+  <label for="Doctor_Calendar" class="col-lg-12">Date</label>
   <div class="col-lg-12">
     <div class="input-group date">
-      <input type="text" class="form-control"><span id="btn-doctor-calendar"  class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+      <input type="text" class="form-control"><span id="Doctor_Calendar"  class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
     </div>
   </div>
 </div>
@@ -421,29 +423,29 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-4">
-                                                                <div><span><strong>Patient Name :</strong></span><span id="summary-patient-name"> Roshan Kedar</span></div>
+                                                                <div><span><strong>Patient Name :</strong></span><span id="Summary_Patient_Name"> Roshan Kedar</span></div>
                                                             </div>
                                                             <div class="col-md-4">
-                                                                <div><span><strong>Contact : </strong></span><span id="summary-contact"> 9823127828</span></div>
+                                                                <div><span><strong>Contact : </strong></span><span id="Summary_Patient_Contact"> 9823127828</span></div>
                                                             </div>
                                                             <div class="col-md-4">
-                                                                <div><span><strong>Last Followup : </strong></span><span id="summary-last-followup"> 20/09/2016</span></div>
+                                                                <div><span><strong>Last Followup : </strong></span><span id="Summary_Last_Followup"> 20/09/2016</span></div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-4">
-                                                                <div><span><strong>Email : </strong></span><span id="summary-patient-email"> abc@cde.com </span></div>
+                                                                <div><span><strong>Email : </strong></span><span id="Summary_Patient_Email"> abc@cde.com </span></div>
                                                             </div>
                                                             <div class="col-md-4">
-                                                                <div><span><strong>City : </strong></span><span id="summary-city"> Pune</span></div>
+                                                                <div><span><strong>City : </strong></span><span id="Summary_City"> Pune</span></div>
                                                             </div>
                                                             <div class="col-md-4">
-                                                                <div><span><strong>Area : </strong></span><span id="summary-area"> Baner, balewadi</span></div>
+                                                                <div><span><strong>Area : </strong></span><span id="Summary_Area"> Baner, balewadi</span></div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12">
-                                                                <div><span><strong>Notes : </strong></span><span id="summary-patient-email"> I am feeling cough and cold since last few days</span></div>
+                                                                <div><span><strong>Notes : </strong></span><span id="Summary_Patient_Notes"> I am feeling cough and cold since last few days</span></div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
@@ -455,18 +457,18 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-4">
-                                                                <div><span><strong>Hospital : </strong></span><span id="summary-hospital-name"> Apollo Hospital</span></div>
+                                                                <div><span><strong>Hospital : </strong></span><span id="Summary_Hospital_Name"> Apollo Hospital</span></div>
                                                             </div>
                                                             <div class="col-md-4">
-                                                                <div><span><strong>Speciality : </strong></span><span id="summary-doctor-speciality"> General </span></div>
+                                                                <div><span><strong>Speciality : </strong></span><span id="Summary_Doctor_Speciality"> General </span></div>
                                                             </div>
                                                             <div class="col-md-4">
-                                                                <div><span><strong>Doctor : </strong></span><span id="summary-area"> Ajit Pawar</span></div>
+                                                                <div><span><strong>Doctor : </strong></span><span id="Summary_Donctor_Name"> Ajit Pawar</span></div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12">
-                                                                <div><span><strong>Appointment Schedule : </strong></span><span id="summary-hospital-name"> Sunday, 22 march, 2017, 12.00-12.30 PM</span></div>
+                                                                <div><span><strong>Appointment Schedule : </strong></span><span id="Summary_Appointment_Schedule"> Sunday, 22 march, 2017, 12.00-12.30 PM</span></div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
@@ -480,7 +482,7 @@
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
     <div class="col-lg-12" style="text-align:left">
-        <button type="button" class="btn btn-primary" id="summary-btn-back">Back</button>
+        <button type="button" class="btn btn-primary" id="Summary_btn-back">Back</button>
     </div>
 </div>
                                                             </div>
@@ -489,7 +491,7 @@
     <div class="col-lg-12" style="text-align:right">
                 <button type="button" class="btn btn-default btn-cancel" style="margin-right:5px;">Cancel</button>
 
-        <button type="form" class="btn btn-primary" id="summary-btn-save">Save</button>
+        <button type="form" class="btn btn-primary" id="Summary_btn-save">Save</button>
     </div>
 </div>
                                                             </div>
