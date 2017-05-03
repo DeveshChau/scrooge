@@ -93,3 +93,12 @@ body {
   background-color:#F5F8FA !important;
 }
 
+.selected-slot, .selected-slot:hover {
+  background: #2780E3 !important;
+  color: #fff;
+}
+
+.unavailable-slot {
+  background: #e7e7e7;
+  opacity: 0.3;
+}

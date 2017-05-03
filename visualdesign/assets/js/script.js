@@ -20,9 +20,10 @@ $(function(){
     });
 
 
-    $(".btn-cancel").on('click', function(){
+    $("#new-appointment-wrapper .btn-cancel").on('click', function(){
         $("#appointment-list-wrapper").toggleClass("hidden");
         $("#new-appointment-wrapper").toggleClass("hidden");
+        $("#wrapper-doctor-slots-table").html("");
     });
 
     $("#new-inquiry-btn-cancel").on('click', function(){
@@ -49,7 +50,15 @@ $(function(){
       });
 
       valid = $tab.find(".has-error").length == 0 ? true : false;
-
+      var isTimeSlotSelected = $("#wrapper-doctor-slots-table input[type=radio][name=slot_radio]").is(':checked');
+      if(isTimeSlotSelected) {
+        $("#err-msg-time-slot").hide();
+        $("#err-msg-time-slot").parents(".form-group").removeClass("has-error has-danger");
+      }else {
+        $("#err-msg-time-slot").show();
+        $("#err-msg-time-slot").parents(".form-group").addClass("has-error has-danger");
+      }
+      valid = valid && isTimeSlotSelected;
       if(!valid) {
          return;
       }
@@ -89,18 +98,28 @@ $(function(){
     }).on("changeDate", function(e){
         console.log(e.timeStamp);
         var t = e.timeStamp;
-        // $.ajax({
-        //   type: "POST",
-        //   url: "http://local.sagar.sutar.in/api.php",
-        //   data: {
-        //       timeStamp: t
-        //   },
-        //   success: function(data) {
-        //     console.log("returnedData", data);
-        //   }
-        // });
+        $.ajax({
+          type: "POST",
+          url: "http://dev.sutar.in/scrooge/api/show_timetable.php",
+          data: {
+              timeStamp: t
+          },
+          success: function(data) {
+            console.log(data);
+            $("#wrapper-doctor-slots-table").html(data);
+            var $table = $("#wrapper-doctor-slots-table table");
+            $table.addClass("table table-striped table-hover");
+            var $radios = $('input[type="radio"][name="slot_radio"]');
+            $table.find("tr").click(function() {
+              $table.find("tr").removeClass("selected-slot");
+              $(this).find("input[type=radio][name=slot_radio]").prop("checked", true);
+              $(this).addClass("selected-slot");
+              $("#err-msg-time-slot").hide();
+              $("#err-msg-time-slot").parents(".form-group").removeClass("has-error has-danger");
+            });
+          }
+        });
     });
-
 
     $('#saveInquiry').on('click', function(){
         var data = $("#form-new-inquiry").serializeArray();
