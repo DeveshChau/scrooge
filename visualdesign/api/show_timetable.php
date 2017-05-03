@@ -4,7 +4,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 $servername = "localhost";
 $username = "root";
-$password = "Ss_80384325";
+$password = "";
 $dbname = "innovation";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);

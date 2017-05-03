@@ -95,14 +95,16 @@ $(function(){
     });
 
     $('#btn-doctor-calendar').datepicker({
+      format:"dd-mm-yyyy"
     }).on("changeDate", function(e){
         console.log(e.timeStamp);
-        var t = e.timeStamp;
+        var d = e.date;
+        var date = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
         $.ajax({
           type: "POST",
           url: "http://dev.sutar.in/scrooge/api/show_timetable.php",
           data: {
-              timeStamp: t
+              date: date
           },
           success: function(data) {
             console.log(data);
