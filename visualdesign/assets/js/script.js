@@ -4,20 +4,20 @@ $(function(){
         return false;
     })
 
-    $("#btn-new-inquiry").on('click', function(){
-        // $("#inquiry-list-wrapper").toggleClass("hidden");
-        // $("#new-inquiry-wrapper").toggleClass("hidden");
-        $(this).parents("#inquiry").find(".wrapper").toggleClass("hidden");
-        $("#form-new-inquiry")[0].reset();
-    });
-
-    $("#btn-new-appointment").on('click', function(){
-        // $("#inquiry-list-wrapper").toggleClass("hidden");
-        // $("#new-inquiry-wrapper").toggleClass("hidden");
-        $(this).parents("#appointments").find(".wrapper").toggleClass("hidden");
-        $('#form-appointments')[0].reset();
-        $('#appointment-breadcrumb a[href="#patient-details"]').tab('show');
-    });
+    // $("#btn-new-inquiry").on('click', function(){
+    //     // $("#inquiry-list-wrapper").toggleClass("hidden");
+    //     // $("#new-inquiry-wrapper").toggleClass("hidden");
+    //     $(this).parents("#inquiry").find(".wrapper").toggleClass("hidden");
+    //     $("#form-new-inquiry")[0].reset();
+    // });
+    //
+    // $("#btn-new-appointment").on('click', function(){
+    //     // $("#inquiry-list-wrapper").toggleClass("hidden");
+    //     // $("#new-inquiry-wrapper").toggleClass("hidden");
+    //     $(this).parents("#appointments").find(".wrapper").toggleClass("hidden");
+    //     $('#form-appointments')[0].reset();
+    //     $('#appointment-breadcrumb a[href="#patient-details"]').tab('show');
+    // });
 
 
     $("#new-appointment-wrapper .btn-cancel").on('click', function(){
@@ -159,4 +159,6 @@ $(function(){
         return returnArray;
     }
 
+    $("#Patient_Contact_Inquiry").typeahead({ source:["9823127828", "8087244978", "80872449888", "8087888978"] });
+    $("#Patient_Contact").typeahead({ source:["9823127828", "8087244978", "80872449888", "8087888978"] });
 });
