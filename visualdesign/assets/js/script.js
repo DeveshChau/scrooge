@@ -102,7 +102,7 @@ $(function(){
         var date = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
         $.ajax({
           type: "POST",
-          url: "http://dev.sutar.in/scrooge/api/show_timetable.php",
+          url: "http://technologyfor.in/innovation/api/show_timetable.php",
           data: {
               date: date
           },
@@ -128,7 +128,7 @@ $(function(){
         var dataOject = objectifyForm(data);
         $.ajax({
             type: "POST",
-            url: "",
+            url: "http://technologyfor.in/innovation/api/save_inquiry.php",
             data: dataOject,
             success: function(data) {
             console.log("returnedData", data);
@@ -141,7 +141,7 @@ $(function(){
         var dataOject = objectifyForm(data);
         $.ajax({
             type: "POST",
-            url: "",
+            url: "http://technologyfor.in/innovation/api/save_appointment.php",
             data: dataOject,
             success: function(data) {
             console.log("returnedData", data);
@@ -159,6 +159,11 @@ $(function(){
         return returnArray;
     }
 
-    $("#Patient_Contact_Inquiry").typeahead({ source:["9823127828", "8087244978", "80872449888", "8087888978"] });
-    $("#Patient_Contact").typeahead({ source:["9823127828", "8087244978", "80872449888", "8087888978"] });
+    $.get("http://technologyfor.in/innovation/api/get_numbers.php", function(data){
+      $("#Patient_Contact_Inquiry").typeahead({ source:data });
+      $("#Patient_Contact").typeahead({ source:data });
+    },'json');
+
+    // $("#Patient_Contact_Inquiry").typeahead({ source:["9823127828", "8087244978", "80872449888", "8087888978"] });
+    // $("#Patient_Contact").typeahead({ source:["9823127828", "8087244978", "80872449888", "8087888978"] });
 });
