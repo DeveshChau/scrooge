@@ -17,8 +17,8 @@
 }
 
 section#container {
-  margin:30px 30px 0 0;
-  padding:20px;
+  margin-bottom: 50px;
+  padding:30px;
   background:#fff;
   border:1px solid #d4d4d4;
   border-radius:5px;
@@ -111,7 +111,19 @@ body {
     border: 1px solid #d4d4d4;
     border-bottom: 0;
     margin-bottom: -1px;
-    margin-top: 50px;
+    margin-top: 20px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
+
+header {
+  margin-top: 20px;
+}
+ header>span {
+   font-size: 20px;
+   color: #888;
+ }
+ header>a {
+   cursor: pointer;
+   padding-top: 5px;
+ }

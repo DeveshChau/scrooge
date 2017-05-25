@@ -58,11 +58,27 @@ $(function(){
         $("#err-msg-time-slot").show();
         $("#err-msg-time-slot").parents(".form-group").addClass("has-error has-danger");
       }
-      valid = valid && isTimeSlotSelected;
+      // valid = valid && isTimeSlotSelected;
       if(!valid) {
          return;
       }
       $('#appointment-breadcrumb a[href="#appointment-summary"]').tab('show');
+
+      var $app_form = $("#form-appointments");
+      $("#summary_patient_name").html($app_form.find("#Patient_Name").val());
+      $("#summary_patient_contact").html($app_form.find("#Patient_Contact").val());
+      $("#summary_patient_email").html($app_form.find("#Patient_Email").val());
+      $("#summary_patient_city").html($app_form.find("#Patient_City").val());
+      $("#summary_patient_area").html($app_form.find("#Patient_Area").val());
+      $("#summary_appoinment_reason").html($app_form.find("#Appointment_Reason").val());
+      $("#summary_patient_notes").html($app_form.find("#notes").val());
+      $("#summary_hospital_name").html($app_form.find("#Hospital_Name").val());
+      $("#summary_doctor_name").html($app_form.find("#Doctor_Name").val());
+      $("#summary_doctor_speciality").html($app_form.find("#Doctor_Name").val());
+
+      var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      var appointment_time = $("#btn-doctor-calendar input").val() + ", " + days[apt_day] + ", " + $("[name=slot_radio]:checked").parent().next().html();
+      $("#summary_appointment").html(appointment_time);
     });
 
     var validator = $("#form-appointments").validator();
@@ -94,11 +110,13 @@ $(function(){
     $('.input-daterange').datepicker({
     });
 
+    var apt_day = "";
     $('#btn-doctor-calendar').datepicker({
       format:"dd-mm-yyyy"
     }).on("changeDate", function(e){
         console.log(e.timeStamp);
         var d = e.date;
+        apt_day = d.getDay();
         var date = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
         $.ajax({
           type: "POST",

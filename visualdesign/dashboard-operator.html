@@ -17,13 +17,23 @@
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-10">
+        <header>
+          <span class="pull-left">Innovation Healthcare System</span>
+          <a href="#" class="pull-right">Logout</a>
+        </header>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
         <ul id="main-menu" class="nav nav-pills">
           <li class="active"><a href="#inquiry" data-toggle="tab" > <i class="fa fa-question-circle fa-fw"></i> Inquiry</a></li>
           <li><a href="#appointments" data-toggle="tab" > <i class="fa fa-bookmark fa-fw"></i> Appointments</a></li>
-          <li><a href="#followups" data-toggle="tab" > <i class="fa fa-info-circle fa-fw"></i> Followups &nbsp;&nbsp;<span class="badge">3</span></a></li>
-          <li><a href="#call-logs" data-toggle="tab" > <i class="fa fa-phone-square fa-fw"></i> Call Logs</a></li>
+          <!-- <li><a href="#followups" data-toggle="tab" > <i class="fa fa-info-circle fa-fw"></i> Followups &nbsp;&nbsp;<span class="badge">3</span></a></li> -->
+          <!-- <li><a href="#call-logs" data-toggle="tab" > <i class="fa fa-phone-square fa-fw"></i> Call Logs</a></li> -->
         </ul>
-        <section id="container" class="tab-content" style="margin:0;padding:30px;">
+        <section id="container" class="tab-content">
           <div id="inquiry" class="tab-pane fade active in">
             <div id="new-inquiry-wrapper">
               <div class="row">
@@ -298,7 +308,7 @@
                                   <label for="Doctor_Calendar" class="col-lg-12">Date</label>
                                   <div class="col-lg-12">
                                     <div class="input-group date" id="btn-doctor-calendar">
-                                      <input type="date" class="form-control" required><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                                      <input type="text" class="form-control" required><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
                                     </div>
                                     <div class="help-block with-errors"></div>
                                   </div>
@@ -338,73 +348,59 @@
                           </div>
                         </div>
                         <div id="appointment-summary" class="tab-pane fade">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <td colspan="3" style="color: #2780E3;"><strong>Patient Details</strong></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td style="width:130px;" ><strong>Patient Name</strong></td>
+                                <td style="width:250px;" id="summary_patient_name">Roshan Kedar</td>
+                                <td style="width:80px;"><strong>Contact</strong></td>
+                                <td id="summary_patient_contact">9823127828</td>
+                                <td  style="width:130px;"><strong>Email</strong></td>
+                                <td id="summary_patient_email">sagy26.1991@gmail.com</td>
+                              </tr>
+                              <tr>
+                                <!-- <td><strong></strong></td>
+                                <td id="summary_patient_last_followup"></td> -->
+                                <td><strong>City</strong></td>
+                                <td id="summary_patient_city">Pune</td>
+                                <td><strong>Area</strong></td>
+                                <td id="summary_patient_area">Baner</td>
+                                <td><strong>Reason</strong></td>
+                                <td id="summary_appoinment_reason">Reason</td>
+                              </tr>
+                              <tr>
+                                <td><strong>Notes</strong></td>
+                                <td colspan="5" id="summary_patient_notes"></td>
+                              </tr>
+                              <tr>
+                                <td colspan="3" style="color: #2780E3;"><strong>Doctor Details</strong></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td><strong>Hospital</strong></td>
+                                <td id="summary_hospital_name">Apollo Hospital</td>
+                                <td><strong>Doctor</strong></td>
+                                <td id="summary_doctor_name">Ajit Pawar</td>
+                                <td><strong>Speciality</strong></td>
+                                <td id="summary_doctor_speciality">General</td>
+                              </tr>
+                              <tr>
+                                <td colspan="1"><strong>Appointment</strong></td>
+                                <td colspan="5" id="summary_appointment"> Sunday, 22 march, 2017, 12.00-12.30 PM</td>
+                              </tr>
+                            </tbody>
+                          </table>
                           <div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <div class="form-group">
-                                  <div class="col-lg-12">
-                                    <strong>Appointment Summary</strong>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-4">
-                                <div><span><strong>Patient Name :</strong></span><span id="Summary_Patient_Name"> Roshan Kedar</span></div>
-                              </div>
-                              <div class="col-md-4">
-                                <div><span><strong>Contact : </strong></span><span id="Summary_Patient_Contact"> 9823127828</span></div>
-                              </div>
-                              <div class="col-md-4">
-                                <div><span><strong>Last Followup : </strong></span><span id="Summary_Last_Followup"> 20/09/2016</span></div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-4">
-                                <div><span><strong>Email : </strong></span><span id="Summary_Patient_Email"> abc@cde.com </span></div>
-                              </div>
-                              <div class="col-md-4">
-                                <div><span><strong>City : </strong></span><span id="Summary_City"> Pune</span></div>
-                              </div>
-                              <div class="col-md-4">
-                                <div><span><strong>Area : </strong></span><span id="Summary_Area"> Baner, balewadi</span></div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-12">
-                                <div><span><strong>Notes : </strong></span><span id="Summary_Patient_Notes"> I am feeling cough and cold since last few days</span></div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-12">
-                                <div>
-                                  <hr>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-4">
-                                <div><span><strong>Hospital : </strong></span><span id="Summary_Hospital_Name"> Apollo Hospital</span></div>
-                              </div>
-                              <div class="col-md-4">
-                                <div><span><strong>Speciality : </strong></span><span id="Summary_Doctor_Speciality"> General </span></div>
-                              </div>
-                              <div class="col-md-4">
-                                <div><span><strong>Doctor : </strong></span><span id="Summary_Donctor_Name"> Ajit Pawar</span></div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-12">
-                                <div><span><strong>Appointment Schedule : </strong></span><span id="Summary_Appointment_Schedule"> Sunday, 22 march, 2017, 12.00-12.30 PM</span></div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-12">
-                                <div>
-                                  <hr>
-                                </div>
-                              </div>
-                            </div>
                             <div class="row">
                               <div class="col-md-6">
                                 <div class="form-group">
