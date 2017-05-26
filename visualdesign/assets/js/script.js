@@ -178,10 +178,53 @@ $(function(){
     }
 
     $.get("http://technologyfor.in/innovation/api/get_numbers.php", function(data){
-      $("#Patient_Contact_Inquiry").typeahead({ source:data });
-      $("#Patient_Contact").typeahead({ source:data });
+
+        $("#Patient_Contact_Inquiry").typeahead({
+          // source:["9823127828", "8087244978", "80872449888", "8087888978"],
+          source: data,
+          afterSelect: function(number) {
+            // var data = [{"Patient_Name":"Roshan Kedar","Patient_Contact":"7709845504","Patient_City":"Pune","Patient_Area":"Baner","Patient_Email":"rosblog3@gmail.com"}];
+            // var patientDetails = data[0];
+            // $("#Patient_Name_Inquiry").val(patientDetails.Patient_Name);
+            // $("#Patient_Area_Inquiry").val(patientDetails.Patient_Area);
+            // $("#Patient_City_Inquiry").val(patientDetails.Patient_City);
+            $.ajax({
+                type: "POST",
+                url: "http://technologyfor.in/innovation/autofill.php",
+                data: {
+                  ContactStartsWith: number
+                },
+                success: function(data) {
+                  var patientDetails = data[0];
+                  $("#Patient_Name_Inquiry").val(patientDetails.Patient_Name);
+                  $("#Patient_Area_Inquiry").val(patientDetails.Patient_Area);
+                  $("#Patient_City_Inquiry").val(patientDetails.Patient_City);
+                }
+            });
+          }
+        });
+
+      $("#Patient_Contact").typeahead({
+        source: data,
+        afterSelect: function(number) {
+          $.ajax({
+              type: "POST",
+              url: "http://technologyfor.in/innovation/autofill.php",
+              data: {
+                ContactStartsWith: number
+              },
+              success: function(data) {
+                var patientDetails = data[0];
+                $("#Patient_Name").val(patientDetails.Patient_Name);
+                $("#Patient_Area").val(patientDetails.Patient_Area);
+                $("#Patient_City").val(patientDetails.Patient_City);
+                $("#Patient_Email").val(patientDetails.Patient_City);
+              }
+          });
+        }
+      });
     },'json');
 
-    // $("#Patient_Contact_Inquiry").typeahead({ source:["9823127828", "8087244978", "80872449888", "8087888978"] });
+
     // $("#Patient_Contact").typeahead({ source:["9823127828", "8087244978", "80872449888", "8087888978"] });
 });
