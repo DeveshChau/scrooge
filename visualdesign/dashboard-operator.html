@@ -44,9 +44,9 @@
                       <div class="row" >
                         <div class="col-md-6">
                           <div class="form-group  has-error">
-                            <label for="Patient_Name" class="col-lg-12">Patient Name *</label>
+                            <label for="Patient_Name_Inquiry" class="col-lg-12">Patient Name *</label>
                             <div class="col-lg-12">
-                              <input class="form-control" id="Patient_Name" placeholder="Name" type="text" name="Patient_Name" pattern=".{3,}" data-pattern-error="Minimum 3 charachters required" required>
+                              <input class="form-control" id="Patient_Name_Inquiry" placeholder="Name" type="text" name="Patient_Name" pattern=".{3,}" data-pattern-error="Minimum 3 charachters required" required>
                               <div class="help-block  with-errors"></div>
                             </div>
                           </div>
@@ -64,24 +64,24 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="Patient_Area" class="col-lg-12">Area</label>
+                            <label for="Patient_Area_Inquiry" class="col-lg-12">Area</label>
                             <div class="col-lg-12">
-                              <input class="form-control" id="Patient_Area" placeholder="Area" name="Patient_Area" type="text">
+                              <input class="form-control" id="Patient_Area_Inquiry" placeholder="Area" name="Patient_Area" type="text">
                               <div class="help-block  with-errors"></div>
                             </div>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="Patient_City" class="col-lg-12">City *</label>
+                            <label for="Patient_City_Inquiry" class="col-lg-12">City *</label>
                             <div class="col-lg-12">
                               <!-- <input required class="form-control" id="Patient_City" placeholder="City" name="Patient_City" type="text"> -->
-                              <select required class="form-control" id="Patient_City" name="Patient_City" data-required-error="Please select a city.">
+                              <select required class="form-control" id="Patient_City_Inquiry" name="Patient_City" data-required-error="Please select a city.">
                                 <option disabled selected value>Select City</option>
-                                <option>Mumbai</option>
-                                <option>Pune</option>
-                                <option>Nashik</option>
-                                <option>Other</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Nashik">Nashik</option>
+                                <option value="Other">Other</option>
                               </select>
                               <div class="help-block  with-errors"></div>
                             </div>
@@ -91,9 +91,9 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="Hospital_ID" class="col-lg-12">Hospital *</label>
+                            <label for="Hospital_Name_Inquiry" class="col-lg-12">Hospital *</label>
                             <div class="col-lg-12">
-                              <select required class="form-control" id="Hospital_ID" name="hospital" data-required-error="Please select a hospital.">
+                              <select required class="form-control" id="Hospital_Name_Inquiry" name="hospital" data-required-error="Please select a hospital.">
                                 <option disabled selected value>Select Hospital</option>
                                 <option>Hospital 1</option>
                                 <option>Hospital 2</option>
@@ -107,9 +107,9 @@
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="Doctor_ID" class="col-lg-12">Doctor</label>
+                            <label for="Doctor_Inquiry" class="col-lg-12">Doctor</label>
                             <div class="col-lg-12">
-                              <input class="form-control" id="Doctor_ID" placeholder="Doctor" name="doctor" type="text">
+                              <input class="form-control" id="Doctor_Inquiry" placeholder="Doctor" name="doctor" type="text">
                             </div>
                           </div>
                         </div>
@@ -207,12 +207,12 @@
                                   <div class="col-lg-12">
                                     <select required class="form-control" id="Patient_City" name="Patient_City" data-required-error="Please select a city.">
                                       <option disabled selected value>Select City</option>
-                                      <option>Mumbai</option>
-                                      <option>Pune</option>
-                                      <option>Nashik</option>
-                                      <option>Other</option>
+                                      <option value="Mumbai">Mumbai</option>
+                                      <option value="Pune">Pune</option>
+                                      <option value="Nashik">Nashik</option>
+                                      <option value="Other">Other</option>
                                     </select>
-                                    <div class="help-block  with-errors"></div>
+                                    <div class="help-block with-errors"></div>
                                   </div>
                                 </div>
                               </div>
