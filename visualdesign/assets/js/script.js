@@ -195,7 +195,7 @@ $(function(){
                   ContactStartsWith: number
                 },
                 success: function(data) {
-                  var patientDetails = data[0];
+                  var patientDetails = JSON.parse(data)[0];
                   $("#Patient_Name_Inquiry").val(patientDetails.Patient_Name);
                   $("#Patient_Area_Inquiry").val(patientDetails.Patient_Area);
                   $("#Patient_City_Inquiry").val(patientDetails.Patient_City);
@@ -214,7 +214,7 @@ $(function(){
                 ContactStartsWith: number
               },
               success: function(data) {
-                var patientDetails = data[0];
+                var patientDetails = JSON.parse(data)[0];
                 $("#Patient_Name").val(patientDetails.Patient_Name);
                 $("#Patient_Area").val(patientDetails.Patient_Area);
                 $("#Patient_City").val(patientDetails.Patient_City);
