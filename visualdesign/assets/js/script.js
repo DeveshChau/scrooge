@@ -218,7 +218,7 @@ $(function(){
                 $("#Patient_Name").val(patientDetails.Patient_Name);
                 $("#Patient_Area").val(patientDetails.Patient_Area);
                 $("#Patient_City").val(patientDetails.Patient_City);
-                $("#Patient_Email").val(patientDetails.Patient_City);
+                $("#Patient_Email").val(patientDetails.Patient_Email);
               }
           });
         }
